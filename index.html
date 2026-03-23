@@ -122,6 +122,26 @@
     color: var(--text-dim); font-size: 1.1rem; pointer-events: none;
   }
 
+  /* SORT SELECTOR */
+  .sort-select-wrap {
+    position: relative; flex-shrink: 0;
+  }
+  .sort-select-wrap select {
+    appearance: none;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 4px; padding: 0.85rem 2.2rem 0.85rem 1rem;
+    color: var(--accent1); font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85rem; outline: none; cursor: pointer;
+    transition: border-color 0.25s;
+    min-width: 160px;
+  }
+  .sort-select-wrap select:focus { border-color: var(--accent1); }
+  .sort-select-wrap::after {
+    content: '▾'; position: absolute; left: 0.7rem; top: 50%;
+    transform: translateY(-50%); color: var(--accent1);
+    pointer-events: none; font-size: 0.8rem;
+  }
+
   /* LANGUAGE SELECTOR */
   .lang-select-wrap {
     position: relative; flex-shrink: 0;
@@ -332,6 +352,14 @@
         <option value="he">עברית</option>
       </select>
     </div>
+    <div class="sort-select-wrap">
+      <select id="sort-select">
+        <option value="az">A → Z</option>
+        <option value="za">Z → A</option>
+<option value="len-asc">קצר → ארוך</option>
+        <option value="len-desc">ארוך → קצר</option>
+      </select>
+    </div>
   </div>
 
   <div class="filter-bar" id="filter-bar">
@@ -396,6 +424,7 @@ let allWords      = [];
 let languageList  = [];
 let activeLang    = 'he';
 let activeFilter  = 'all';
+let activeSort    = 'az';
 let currentWordForModal = null;
 
 // ─── LOAD DATA ────────────────────────────────────────────────────────────────
@@ -428,11 +457,9 @@ async function loadData() {
       document.getElementById('version-tag').textContent = `v${data.meta.version}`;
     }
 
-    // Sort alphabetically by Tetralongia
-    allWords.sort((a, b) => a.tetralongia.toLowerCase().localeCompare(b.tetralongia.toLowerCase()));
-
     document.getElementById('loader').remove();
     buildLangSelect();
+    buildSortSelect();
     buildFilterBar();
     buildLegend();
     render();
@@ -462,6 +489,39 @@ function buildLangSelect() {
     document.getElementById('search').dir = rtlLangs.includes(activeLang) ? 'rtl' : 'ltr';
     render();
   });
+}
+
+// ─── SORT SELECTOR ────────────────────────────────────────────────────────────
+function buildSortSelect() {
+  const sel = document.getElementById('sort-select');
+  sel.addEventListener('change', () => {
+    activeSort = sel.value;
+    render();
+  });
+}
+
+function getSortedWords(words) {
+  const catOrder = Object.keys(CAT_CONFIG);
+  const arr = [...words];
+  switch (activeSort) {
+    case 'az':
+      return arr.sort((a, b) => a.tetralongia.toLowerCase().localeCompare(b.tetralongia.toLowerCase()));
+    case 'za':
+      return arr.sort((a, b) => b.tetralongia.toLowerCase().localeCompare(a.tetralongia.toLowerCase()));
+    case 'cat':
+      return arr.sort((a, b) => {
+        const ai = catOrder.indexOf(a.gramCat);
+        const bi = catOrder.indexOf(b.gramCat);
+        if (ai !== bi) return ai - bi;
+        return a.tetralongia.toLowerCase().localeCompare(b.tetralongia.toLowerCase());
+      });
+    case 'len-asc':
+      return arr.sort((a, b) => a.tetralongia.length - b.tetralongia.length || a.tetralongia.localeCompare(b.tetralongia));
+    case 'len-desc':
+      return arr.sort((a, b) => b.tetralongia.length - a.tetralongia.length || a.tetralongia.localeCompare(b.tetralongia));
+    default:
+      return arr;
+  }
 }
 
 // ─── FILTER BAR ───────────────────────────────────────────────────────────────
@@ -547,7 +607,8 @@ function render() {
   const langName = langInfo ? langInfo.native_name : activeLang;
   stats.innerHTML = `מציג <span>${filtered.length}</span> / ${allWords.length} מילים &nbsp;·&nbsp; שפה: <span>${langName}</span>`;
 
-  filtered.forEach(w => {
+  const sorted = getSortedWords(filtered);
+  sorted.forEach(w => {
     const cat   = CAT_CONFIG[w.gramCat] ?? { color: '#5a7a99', label: w.gramCat };
     const color = w.subCat && SUBCATEGORY_COLORS[w.subCat]
       ? SUBCATEGORY_COLORS[w.subCat]
