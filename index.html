@@ -78,16 +78,31 @@
     letter-spacing: 0.2em; margin-top: 0.75rem;
   }
 
+  .version-tag {
+    display: inline-block;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65rem; color: var(--accent1);
+    border: 1px solid rgba(0,212,255,0.3);
+    padding: 0.2rem 0.6rem; border-radius: 3px;
+    margin-top: 0.6rem; letter-spacing: 0.12em;
+    opacity: 0.7;
+  }
+
   .divider {
     width: 100%; height: 1px;
     background: linear-gradient(90deg, transparent, var(--accent1), transparent);
     opacity: 0.3; margin: 2.5rem 0;
   }
 
-  /* SEARCH */
-  .search-wrap { display: flex; justify-content: center; margin-bottom: 2.5rem; }
+  /* CONTROLS ROW */
+  .controls-row {
+    display: flex; gap: 1rem; align-items: center;
+    justify-content: center; margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
 
-  .search-box { position: relative; width: 100%; max-width: 560px; }
+  /* SEARCH */
+  .search-box { position: relative; flex: 1; max-width: 400px; min-width: 200px; }
 
   .search-box input {
     width: 100%; background: var(--surface); border: 1px solid var(--border);
@@ -105,6 +120,26 @@
     position: absolute; left: 1rem; top: 50%;
     transform: translateY(-50%);
     color: var(--text-dim); font-size: 1.1rem; pointer-events: none;
+  }
+
+  /* LANGUAGE SELECTOR */
+  .lang-select-wrap {
+    position: relative; flex-shrink: 0;
+  }
+  .lang-select-wrap select {
+    appearance: none;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 4px; padding: 0.85rem 2.2rem 0.85rem 1rem;
+    color: var(--accent1); font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85rem; outline: none; cursor: pointer;
+    transition: border-color 0.25s;
+    min-width: 170px;
+  }
+  .lang-select-wrap select:focus { border-color: var(--accent1); }
+  .lang-select-wrap::after {
+    content: '▾'; position: absolute; left: 0.7rem; top: 50%;
+    transform: translateY(-50%); color: var(--accent1);
+    pointer-events: none; font-size: 0.8rem;
   }
 
   /* FILTER BAR */
@@ -145,20 +180,89 @@
   }
   .card:hover { transform: translateY(-3px); }
 
-  .card-Tetralongia {
+  .card-tetralongia {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.12rem; font-weight: 700;
     letter-spacing: 0.03em; line-height: 1.2;
   }
-  .card-hebrew { font-size: 1.05rem; color: var(--text); }
+  .card-primary { font-size: 1.05rem; color: var(--text); }
+  .card-english {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.78rem; color: var(--text-dim); letter-spacing: 0.05em;
+  }
   .card-type {
     font-family: 'Share Tech Mono', monospace; font-size: 0.6rem;
     letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim);
   }
-  .card-note {
-    font-size: 0.76rem; color: var(--text-dim); line-height: 1.45;
+  .card-category {
+    font-family: 'Share Tech Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.1em; opacity: 0.55;
+  }
+  .card-extra-langs {
+    font-size: 0.68rem; color: var(--text-dim); line-height: 1.6;
     border-top: 1px solid var(--border); padding-top: 0.4rem; margin-top: 0.2rem;
   }
+  .card-extra-langs .lang-pill {
+    display: inline-block; margin-left: 0.3rem; margin-bottom: 0.15rem;
+  }
+  .card-extra-langs .lang-code {
+    color: var(--accent1); font-family: 'Share Tech Mono', monospace;
+    font-size: 0.6rem; opacity: 0.7;
+  }
+
+  /* EXPANDED CARD (modal) */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0; z-index: 100;
+    background: rgba(6,10,16,0.88); backdrop-filter: blur(4px);
+    align-items: center; justify-content: center;
+  }
+  .modal-overlay.open { display: flex; }
+
+  .modal {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 2rem; max-width: 680px; width: 90%;
+    max-height: 80vh; overflow-y: auto;
+    position: relative;
+    box-shadow: 0 0 60px rgba(0,212,255,0.1);
+  }
+  .modal-close {
+    position: absolute; top: 1rem; left: 1rem;
+    background: none; border: none; color: var(--text-dim);
+    font-family: 'Share Tech Mono', monospace; font-size: 0.8rem;
+    cursor: pointer; letter-spacing: 0.1em;
+    transition: color 0.2s;
+  }
+  .modal-close:hover { color: var(--accent1); }
+  .modal-title {
+    font-family: 'Orbitron', monospace; font-size: 2rem;
+    font-weight: 900; margin-bottom: 0.3rem;
+  }
+  .modal-english {
+    font-family: 'Share Tech Mono', monospace; color: var(--text-dim);
+    font-size: 0.85rem; margin-bottom: 0.5rem; letter-spacing: 0.1em;
+  }
+  .modal-badges { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .modal-badge {
+    font-family: 'Share Tech Mono', monospace; font-size: 0.62rem;
+    padding: 0.2rem 0.6rem; border-radius: 3px; border: 1px solid;
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .modal-langs-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.5rem;
+  }
+  .modal-lang-item {
+    background: rgba(0,212,255,0.03); border: 1px solid var(--border);
+    border-radius: 4px; padding: 0.5rem 0.75rem;
+    display: flex; flex-direction: column; gap: 0.1rem;
+  }
+  .modal-lang-code {
+    font-family: 'Share Tech Mono', monospace; font-size: 0.58rem;
+    color: var(--accent1); opacity: 0.6; letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .modal-lang-name { font-size: 0.7rem; color: var(--text-dim); }
+  .modal-lang-value { font-size: 0.95rem; color: var(--text); }
 
   /* NO RESULTS */
   #no-results {
@@ -200,6 +304,8 @@
     .container { padding: 1rem; }
     h1 { font-size: 3rem; }
     .grid { grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); }
+    .controls-row { flex-direction: column; }
+    .search-box { max-width: 100%; }
   }
 </style>
 </head>
@@ -210,15 +316,21 @@
     <div class="logo-symbol">◈ Tristism Language Project ◈</div>
     <h1>Tetralongia</h1>
     <div class="subtitle">מילון השפה הרשמי // Periodic Language Dictionary</div>
+    <div class="version-tag" id="version-tag">v4.0 — Ultimate Consolidated Edition</div>
   </header>
 
   <div class="divider"></div>
 
-  <div class="search-wrap">
+  <div class="controls-row">
     <div class="search-box">
       <span class="search-icon">⌕</span>
       <input type="text" id="search"
-             placeholder="חיפוש מילה בעברית או ב-Tetralongia..." autocomplete="off">
+             placeholder="חיפוש מילה..." autocomplete="off">
+    </div>
+    <div class="lang-select-wrap">
+      <select id="lang-select">
+        <option value="he">עברית</option>
+      </select>
     </div>
   </div>
 
@@ -242,15 +354,49 @@
 
 </div>
 
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modal-close">✕ סגור</button>
+    <div class="modal-title" id="modal-title"></div>
+    <div class="modal-english" id="modal-english"></div>
+    <div class="modal-badges" id="modal-badges"></div>
+    <div class="modal-langs-grid" id="modal-langs-grid"></div>
+  </div>
+</div>
+
 <script>
-// ─── CONFIG ───────────────────────────────────────────────────────────────────
-// שנה את הנתיב אם ה-JSON נמצא במקום אחר
 const JSON_URL = 'Tetralongia_words.json';
 
+// ─── CATEGORY CONFIG ──────────────────────────────────────────────────────────
+const CAT_CONFIG = {
+  nouns:           { label: 'שמות עצם',    color: '#00d4ff' },
+  verbs:           { label: 'פעלים',        color: '#00ff9f' },
+  adjectives:      { label: 'תארים',        color: '#ff9f00' },
+  adverbs:         { label: 'תארי פועל',    color: '#c77dff' },
+  connectors:      { label: 'מחברים',       color: '#ff6b6b' },
+  questions:       { label: 'שאלות',        color: '#ffd166' },
+  greetings:       { label: 'ברכות',        color: '#06d6a0' },
+  negation_general:{ label: 'שלילה',        color: '#ef476f' },
+};
+
+// Sub-category colors for nouns
+const SUBCATEGORY_COLORS = {
+  celestial:  '#00d4ff',
+  elements:   '#ff9f00',
+  nature:     '#00ff9f',
+  human:      '#c77dff',
+  time:       '#ffd166',
+  abstract:   '#ef476f',
+  place:      '#06d6a0',
+};
+
 // ─── STATE ────────────────────────────────────────────────────────────────────
-let allWords    = [];
-let categories  = {};
-let activeFilter = 'all';
+let allWords      = [];
+let languageList  = [];
+let activeLang    = 'he';
+let activeFilter  = 'all';
+let currentWordForModal = null;
 
 // ─── LOAD DATA ────────────────────────────────────────────────────────────────
 async function loadData() {
@@ -259,10 +405,34 @@ async function loadData() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
 
-    allWords   = data.words;
-    categories = data.categories;
+    languageList = data.language_list || [];
+
+    // Flatten all words from all grammatical categories
+    const vocab = data.core_vocabulary_multilingual_complete || {};
+    allWords = [];
+    Object.entries(vocab).forEach(([gramCat, items]) => {
+      if (gramCat === 'description' || !Array.isArray(items)) return;
+      items.forEach(w => {
+        allWords.push({
+          tetralongia:  w.tetralongia || '',
+          english:      w.english || '',
+          gramCat:      gramCat,          // nouns / verbs / adjectives …
+          subCat:       w.category || '', // celestial / elements / nature …
+          translations: w.translations || {},
+        });
+      });
+    });
+
+    // Update version tag if present
+    if (data.meta?.version) {
+      document.getElementById('version-tag').textContent = `v${data.meta.version}`;
+    }
+
+    // Sort alphabetically by Tetralongia
+    allWords.sort((a, b) => a.tetralongia.toLowerCase().localeCompare(b.tetralongia.toLowerCase()));
 
     document.getElementById('loader').remove();
+    buildLangSelect();
     buildFilterBar();
     buildLegend();
     render();
@@ -274,17 +444,37 @@ async function loadData() {
   }
 }
 
+// ─── LANGUAGE SELECTOR ────────────────────────────────────────────────────────
+function buildLangSelect() {
+  const sel = document.getElementById('lang-select');
+  sel.innerHTML = '';
+  languageList.forEach(lang => {
+    const opt = document.createElement('option');
+    opt.value = lang.code;
+    opt.textContent = `${lang.native_name} (${lang.code})`;
+    if (lang.code === 'he') opt.selected = true;
+    sel.appendChild(opt);
+  });
+  sel.addEventListener('change', () => {
+    activeLang = sel.value;
+    // Adjust RTL/LTR for the search placeholder
+    const rtlLangs = ['he', 'ar'];
+    document.getElementById('search').dir = rtlLangs.includes(activeLang) ? 'rtl' : 'ltr';
+    render();
+  });
+}
+
 // ─── FILTER BAR ───────────────────────────────────────────────────────────────
 function buildFilterBar() {
   const bar = document.getElementById('filter-bar');
   const DIM = '#5a7a99';
 
-  // Style the pre-existing "all" button
   const allBtn = bar.querySelector('[data-cat="all"]');
   styleBtn(allBtn, DIM, true);
 
-  // Add one button per category
-  Object.entries(categories).forEach(([key, cat]) => {
+  Object.entries(CAT_CONFIG).forEach(([key, cat]) => {
+    // Only add button if we have words in this category
+    if (!allWords.some(w => w.gramCat === key)) return;
     const btn = document.createElement('button');
     btn.className = 'filter-btn';
     btn.dataset.cat = key;
@@ -296,18 +486,13 @@ function buildFilterBar() {
   bar.addEventListener('click', e => {
     const btn = e.target.closest('.filter-btn');
     if (!btn) return;
-
-    // Deactivate all
     bar.querySelectorAll('.filter-btn').forEach(b => {
-      const c = b.dataset.cat === 'all' ? DIM : (categories[b.dataset.cat]?.color ?? DIM);
+      const c = b.dataset.cat === 'all' ? DIM : (CAT_CONFIG[b.dataset.cat]?.color ?? DIM);
       styleBtn(b, c, false);
     });
-
-    // Activate clicked
     activeFilter = btn.dataset.cat;
-    const col = activeFilter === 'all' ? DIM : (categories[activeFilter]?.color ?? DIM);
+    const col = activeFilter === 'all' ? DIM : (CAT_CONFIG[activeFilter]?.color ?? DIM);
     styleBtn(btn, col, true);
-
     render();
   });
 }
@@ -328,11 +513,12 @@ function styleBtn(btn, color, active) {
 // ─── LEGEND ───────────────────────────────────────────────────────────────────
 function buildLegend() {
   const legend = document.getElementById('legend');
-  Object.entries(categories).forEach(([, cat]) => {
+  Object.entries(CAT_CONFIG).forEach(([key, cat]) => {
+    if (!allWords.some(w => w.gramCat === key)) return;
     legend.insertAdjacentHTML('beforeend', `
       <div class="legend-item">
         <div class="legend-dot" style="background:${cat.color}"></div>
-        ${cat.label}${cat.rule ? ' — ' + cat.rule : ''}
+        ${cat.label}
       </div>`);
   });
 }
@@ -344,34 +530,53 @@ function render() {
   const noRes  = document.getElementById('no-results');
   const stats  = document.getElementById('stats');
 
-  // Remove old cards (keep #no-results)
   grid.querySelectorAll('.card').forEach(c => c.remove());
 
   const filtered = allWords.filter(w => {
-    const matchCat = activeFilter === 'all' || w.cat === activeFilter;
-    const matchQ   = !query
-      || w.Tetralongia.toLowerCase().includes(query)
-      || w.hebrew.includes(query)
-      || (w.note && w.note.toLowerCase().includes(query));
+    const matchCat = activeFilter === 'all' || w.gramCat === activeFilter;
+    const primaryTrans = (w.translations[activeLang] || '').toLowerCase();
+    const matchQ = !query
+      || w.tetralongia.toLowerCase().includes(query)
+      || primaryTrans.includes(query)
+      || w.english.toLowerCase().includes(query);
     return matchCat && matchQ;
   });
 
   noRes.style.display = filtered.length === 0 ? 'block' : 'none';
-  stats.innerHTML = `מציג <span>${filtered.length}</span> / ${allWords.length} מילים`;
+  const langInfo = languageList.find(l => l.code === activeLang);
+  const langName = langInfo ? langInfo.native_name : activeLang;
+  stats.innerHTML = `מציג <span>${filtered.length}</span> / ${allWords.length} מילים &nbsp;·&nbsp; שפה: <span>${langName}</span>`;
 
   filtered.forEach(w => {
-    const cat   = categories[w.cat] ?? { color: '#5a7a99', label: w.cat };
-    const color = cat.color;
+    const cat   = CAT_CONFIG[w.gramCat] ?? { color: '#5a7a99', label: w.gramCat };
+    const color = w.subCat && SUBCATEGORY_COLORS[w.subCat]
+      ? SUBCATEGORY_COLORS[w.subCat]
+      : cat.color;
+
+    const primaryTrans = w.translations[activeLang] || '—';
+
+    // Pick 3 extra languages to preview (exclude active lang and English if active)
+    const previewLangs = languageList
+      .filter(l => l.code !== activeLang && l.code !== 'he' || activeLang !== 'he')
+      .filter(l => l.code !== activeLang)
+      .slice(0, 3);
 
     const card = document.createElement('div');
     card.className = 'card';
     card.style.borderRightColor = color;
 
+    const extraHtml = previewLangs.map(l => {
+      const val = w.translations[l.code];
+      if (!val) return '';
+      return `<span class="lang-pill"><span class="lang-code">${l.code}</span> ${val}</span>`;
+    }).join(' ');
+
     card.innerHTML = `
-      <div class="card-Tetralongia" style="color:${color}">${w.Tetralongia}</div>
-      <div class="card-hebrew">${w.hebrew}</div>
-      <div class="card-type">${cat.label}</div>
-      ${w.note ? `<div class="card-note">${w.note}</div>` : ''}`;
+      <div class="card-tetralongia" style="color:${color}">${w.tetralongia}</div>
+      <div class="card-primary">${primaryTrans}</div>
+      ${activeLang !== 'en' ? `<div class="card-english">${w.english}</div>` : ''}
+      <div class="card-type">${cat.label}${w.subCat ? ' · ' + w.subCat : ''}</div>
+      ${extraHtml ? `<div class="card-extra-langs">${extraHtml}</div>` : ''}`;
 
     card.addEventListener('mouseenter', () => {
       card.style.borderColor = color;
@@ -382,9 +587,49 @@ function render() {
       card.style.borderRightColor = color;
       card.style.boxShadow        = 'none';
     });
+    card.addEventListener('click', () => openModal(w, color));
 
     grid.appendChild(card);
   });
+}
+
+// ─── MODAL ────────────────────────────────────────────────────────────────────
+function openModal(w, color) {
+  const cat = CAT_CONFIG[w.gramCat] ?? { color: '#5a7a99', label: w.gramCat };
+
+  document.getElementById('modal-title').textContent = w.tetralongia;
+  document.getElementById('modal-title').style.color = color;
+  document.getElementById('modal-english').textContent = w.english;
+
+  const badges = document.getElementById('modal-badges');
+  badges.innerHTML = `
+    <span class="modal-badge" style="border-color:${cat.color};color:${cat.color}">${cat.label}</span>
+    ${w.subCat ? `<span class="modal-badge" style="border-color:${color};color:${color}">${w.subCat}</span>` : ''}
+  `;
+
+  const langsGrid = document.getElementById('modal-langs-grid');
+  langsGrid.innerHTML = languageList.map(l => {
+    const val = w.translations[l.code];
+    if (!val) return '';
+    return `
+      <div class="modal-lang-item">
+        <div class="modal-lang-code">${l.code}</div>
+        <div class="modal-lang-name">${l.native_name}</div>
+        <div class="modal-lang-value">${val}</div>
+      </div>`;
+  }).join('');
+
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeModal();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
 }
 
 // ─── SEARCH ───────────────────────────────────────────────────────────────────
