@@ -3,7 +3,7 @@
     "title": "Tetralongia - Ultimate Consolidated Dictionary",
     "subtitle": "שפת הטריזם בכל העולם | A Language Based on the Periodic Table",
     "total_languages": 30,
-    "total_vocabulary_items": 79,
+    "total_vocabulary_items": 80,
     "date_created": "2026-03-23",
     "date_consolidated": "2026-03-23",
     "date_updated": "2026-03-24",
@@ -14,7 +14,8 @@
       "Mag (Very/Much/A lot) - Intensifier",
       "NeKMag (A little/Not much) - Negation of intensity",
       "Silicon (Sik), Oxygen (OOik), Sand (SiOOik) - Chemical element words",
-      "Glass (sokfalmagik) - Compound word from sand + heat + intensity"
+      "Glass (sokfalmagik) - Compound word from sand + heat + intensity",
+      "Gold (auik) - Precious metal from transition metals, representing rarity and value"
     ]
   },
   "language_list": [
@@ -2180,7 +2181,7 @@
     ],
     "connectors": [
       {
-        "tetralongia": "Co",
+        "tetralongia": "Ko",
         "english": "And",
         "translations": {
           "he": "ו / וגם",
@@ -2294,7 +2295,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "Cu",
+        "tetralongia": "Ku",
         "english": "Because",
         "translations": {
           "he": "כי / בגלל",
@@ -2828,6 +2829,45 @@
         },
         "why": "",
         "abbreviation": ""
+      },
+      {
+        "tetralongia": "auik",
+        "english": "Gold",
+        "category": "precious_metal",
+        "translations": {
+          "he": "זהב",
+          "en": "Gold",
+          "es": "Oro",
+          "fr": "Or",
+          "de": "Gold",
+          "ru": "Золото",
+          "ja": "金",
+          "zh": "黄金",
+          "ar": "الذهب",
+          "it": "Oro",
+          "pt": "Ouro",
+          "ko": "금",
+          "nl": "Goud",
+          "pl": "Złoto",
+          "tr": "Altın",
+          "th": "ทอง",
+          "vi": "Vàng",
+          "id": "Emas",
+          "hi": "सोना",
+          "uk": "Золото",
+          "el": "Χρυσός",
+          "cs": "Zlato",
+          "sv": "Guld",
+          "da": "Guld",
+          "no": "Gull",
+          "fi": "Kulta",
+          "hu": "Arany",
+          "ro": "Aur",
+          "sm": "Auro",
+          "haw": "Gula"
+        },
+        "why": "Au (Aurum) - Transition metal from Period 6, Group 11 of the Periodic Table. Represents rarity, value, and immutability due to its non-reactive nature and precious status. The suffix '-ik' follows the noun formation pattern from Group 14 (Si, C, Ge, Sn, Pb) for constructed objects and precious substances.",
+        "abbreviation": "Au"
       }
     ],
     "negation_general": [
@@ -2984,9 +3024,9 @@
     "note_7": "The complete vocabulary now covers 70 items across 30 major world languages plus sign language considerations"
   },
   "statistics": {
-    "total_words": 79,
+    "total_words": 80,
     "total_languages": 30,
-    "noun_count": 27,
+    "noun_count": 28,
     "verb_count": 10,
     "adjective_count": 10,
     "adverb_count": 4,
@@ -2996,8 +3036,8 @@
     "negation_count": 1,
     "intensifier_count": 2,
     "native_speakers_covered": "5.6+ billion people",
-    "coverage": "Complete consolidated edition with all vocabulary fully translated",
-    "element_count": 3
+    "coverage": "Complete consolidated edition with all vocabulary fully translated including Gold (Au) - precious metals category",
+    "element_count": 4
   },
   "file_consolidation_metadata": {
     "consolidation_date": "2026-03-23",
