@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tetralongia — מילון השפה</title>
+<title>tetralingua — מילון השפה</title>
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Noto+Serif+Hebrew:wght@300;400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -205,7 +205,7 @@
   }
   .card:hover { transform: translateY(-3px); }
 
-  .card-tetralongia {
+  .card-tetralingua {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.12rem; font-weight: 700;
     letter-spacing: 0.03em; line-height: 1.2;
@@ -339,7 +339,7 @@
 
   <header>
     <div class="logo-symbol">◈ tetraism Language Project ◈</div>
-    <h1>Tetralongia</h1>
+    <h1>tetralingua</h1>
     <div class="version-tag" id="version-tag">מילון השפה הרשמי</div>
   </header>
 
@@ -373,7 +373,7 @@
   <div class="stats" id="stats">טוען נתונים...</div>
 
   <div class="grid" id="grid">
-    <div id="loader">⟳ טוען מילון מ-Tetralongia_words.json ...</div>
+    <div id="loader">⟳ טוען מילון מ-tetralingua_words.json ...</div>
     <div id="no-results">לא נמצאו תוצאות // No results found</div>
   </div>
 
@@ -391,7 +391,7 @@
   </div>
 
   <footer>
-    Tetralongia // שפת הטריזם // מבוססת על הטבלה המחזורית
+    tetralingua // שפת הטריזם // מבוססת על הטבלה המחזורית
   </footer>
 
 </div>
@@ -407,7 +407,7 @@
 </div>
 
 <script>
-const JSON_URL = 'Tetralongia_words.json';
+const JSON_URL = 'tetralingua_words.json';
 
 // ─── CATEGORY CONFIG ──────────────────────────────────────────────────────────
 const CAT_CONFIG = {
@@ -452,7 +452,7 @@ async function loadData() {
       if (gramCat === 'description' || !Array.isArray(items)) return;
       items.forEach(w => {
         allWords.push({
-          tetralongia:  w.tetralongia || '',
+          tetralingua:  w.tetralingua || '',
           english:      w.english || '',
           gramCat:      gramCat,
           subCat:       w.category || '',
@@ -507,10 +507,10 @@ function buildSortSelect() {
 function getSortedWords(words) {
   const arr = [...words];
   switch (activeSort) {
-    case 'az': return arr.sort((a, b) => a.tetralongia.toLowerCase().localeCompare(b.tetralongia.toLowerCase()));
-    case 'za': return arr.sort((a, b) => b.tetralongia.toLowerCase().localeCompare(a.tetralongia.toLowerCase()));
-    case 'len-asc': return arr.sort((a, b) => a.tetralongia.length - b.tetralongia.length || a.tetralongia.localeCompare(b.tetralongia));
-    case 'len-desc': return arr.sort((a, b) => b.tetralongia.length - a.tetralongia.length || a.tetralongia.localeCompare(b.tetralongia));
+    case 'az': return arr.sort((a, b) => a.tetralingua.toLowerCase().localeCompare(b.tetralingua.toLowerCase()));
+    case 'za': return arr.sort((a, b) => b.tetralingua.toLowerCase().localeCompare(a.tetralingua.toLowerCase()));
+    case 'len-asc': return arr.sort((a, b) => a.tetralingua.length - b.tetralingua.length || a.tetralingua.localeCompare(b.tetralingua));
+    case 'len-desc': return arr.sort((a, b) => b.tetralingua.length - a.tetralingua.length || a.tetralingua.localeCompare(b.tetralingua));
     default: return arr;
   }
 }
@@ -580,7 +580,7 @@ function render() {
     const matchCat = activeFilter === 'all' || w.gramCat === activeFilter;
     const primaryTrans = (w.translations[activeLang] || '').toLowerCase();
     const matchQ = !query
-      || w.tetralongia.toLowerCase().includes(query)
+      || w.tetralingua.toLowerCase().includes(query)
       || primaryTrans.includes(query)
       || w.english.toLowerCase().includes(query);
     return matchCat && matchQ;
@@ -613,7 +613,7 @@ function render() {
     }).join(' ');
 
     card.innerHTML = `
-      <div class="card-tetralongia" style="color:${color}">${w.tetralongia}</div>
+      <div class="card-tetralingua" style="color:${color}">${w.tetralingua}</div>
       <div class="card-primary">${primaryTrans}</div>
       ${activeLang !== 'en' ? `<div class="card-english">${w.english}</div>` : ''}
       <div class="card-type">${cat.label}${w.subCat ? ' · ' + w.subCat : ''}</div>
@@ -635,7 +635,7 @@ function render() {
 
 function openModal(w, color) {
   const cat = CAT_CONFIG[w.gramCat] ?? { color: '#5a7a99', label: w.gramCat };
-  document.getElementById('modal-title').textContent = w.tetralongia;
+  document.getElementById('modal-title').textContent = w.tetralingua;
   document.getElementById('modal-title').style.color = color;
   document.getElementById('modal-english').textContent = w.english;
 

@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "Tetralongia - Ultimate Consolidated Dictionary",
+    "title": "tetralingua - Ultimate Consolidated Dictionary",
     "subtitle": "שפת הטריזם בכל העולם | A Language Based on the Periodic Table",
     "total_languages": 30,
     "total_vocabulary_items": 80,
     "date_created": "2026-03-23",
     "date_consolidated": "2026-03-23",
     "date_updated": "2026-03-24",
-    "description": "Complete consolidated translation of Tetralongia (Treizism) - a constructed language based on the periodic table of elements - into 30 major world languages including newly added Samoan and Hawaiian - Including base material state definitions (Solid/Liquid/Gas) and intensity modifiers (Mag/NeKMag)",
+    "description": "Complete consolidated translation of tetralingua (Treizism) - a constructed language based on the periodic table of elements - into 30 major world languages including newly added Samoan and Hawaiian - Including base material state definitions (Solid/Liquid/Gas) and intensity modifiers (Mag/NeKMag)",
     "new_additions": [
       "Samoan (sm)",
       "Hawaiian (haw)",
@@ -204,7 +204,7 @@
     "description": "Complete vocabulary - 70 items translated into all 30 languages organized by category",
     "nouns": [
       {
-        "tetralongia": "solik",
+        "tetralingua": "solik",
         "english": "Sun",
         "category": "celestial",
         "translations": {
@@ -243,7 +243,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "lunek",
+        "tetralingua": "lunek",
         "english": "Moon",
         "category": "celestial",
         "translations": {
@@ -282,7 +282,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "terik",
+        "tetralingua": "terik",
         "english": "Earth",
         "category": "celestial",
         "translations": {
@@ -321,7 +321,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "falik",
+        "tetralingua": "falik",
         "english": "Fire",
         "category": "elements",
         "translations": {
@@ -360,7 +360,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "auik",
+        "tetralingua": "auik",
         "english": "Gold",
         "translations": {
           "he": "זהב",
@@ -398,7 +398,7 @@
         "abbreviation": "Au"
       },
             {
-        "tetralongia": "KuLiK",
+        "tetralingua": "KuLiK",
 				"english": "electricity",
 				"category": "materials",
 				"translations": {
@@ -438,7 +438,7 @@
         "abbreviation": ""
       },
             {
-        "tetralongia": "Klnminik",
+        "tetralingua": "Klnminik",
 				"english": "flashlight",
 				"translations": {
 					"he": "פנס",
@@ -477,7 +477,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "aqueousik",
+        "tetralingua": "aqueousik",
 				"english": "madness",
 				"translations": {
 					"he": "שיגעון",
@@ -516,7 +516,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "norik",
+        "tetralingua": "norik",
         "english": "Light",
         "category": "elements",
         "translations": {
@@ -555,7 +555,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "hofalik",
+        "tetralingua": "hofalik",
         "english": "lava",
         "category": "materials",
         "translations": {
@@ -594,7 +594,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "murik",
+        "tetralingua": "murik",
         "english": "Stone",
         "category": "materials",
         "translations": {
@@ -633,7 +633,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "noarech",
+        "tetralingua": "noarech",
 				"english": "air",
 				"category": "materials",
 				"translations": {
@@ -673,7 +673,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "Shrekulik",
+        "tetralingua": "Shrekulik",
 				"english": "computer",
 				"translations": {
 					"he": "מחשב",
@@ -712,7 +712,7 @@
         "abbreviation": ""
       },
             {
-        "tetralongia": "Shrdik",
+        "tetralingua": "Shrdik",
 				"english": "box",
 				"translations": {
 					"he": "קופסה",
@@ -751,7 +751,7 @@
         "abbreviation": ""
       },
                   {
-        "tetralongia": "Yomag",
+        "tetralingua": "Yomag",
 				"english": "full",
 				"translations": {
 					"he": "שבע",
@@ -790,7 +790,7 @@
         "abbreviation": ""
       },
                         {
-        "tetralongia": "Yonemag",
+        "tetralingua": "Yonemag",
 				"english": "hungry",
 				"translations": {
 					"he": "רעב",
@@ -829,7 +829,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "KuLiK",
+        "tetralingua": "KuLiK",
 				"english": "electricity",
 				"category": "materials",
 				"translations": {
@@ -869,7 +869,7 @@
         "abbreviation": ""
       },
             {
-        "tetralongia": "Kulnorik",
+        "tetralingua": "Kulnorik",
 				"english": "lamp",
 				"category": "materials",
 				"translations": {
@@ -909,7 +909,7 @@
         "abbreviation": "Klnik"
       },
       {
-        "tetralongia": "talik",
+        "tetralingua": "talik",
         "english": "Tree",
         "category": "nature",
         "translations": {
@@ -948,7 +948,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "venik",
+        "tetralingua": "venik",
         "english": "Wind",
         "category": "elements",
         "translations": {
@@ -987,7 +987,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "domik",
+        "tetralingua": "domik",
         "english": "House",
         "category": "buildings",
         "translations": {
@@ -1026,7 +1026,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "nerik",
+        "tetralingua": "nerik",
         "english": "Heart",
         "category": "anatomy",
         "translations": {
@@ -1065,7 +1065,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "melik",
+        "tetralingua": "melik",
         "english": "Language",
         "category": "abstract",
         "translations": {
@@ -1104,7 +1104,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "zorik",
+        "tetralingua": "zorik",
         "english": "Time",
         "category": "abstract",
         "translations": {
@@ -1143,7 +1143,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "hanik",
+        "tetralingua": "hanik",
         "english": "Human",
         "category": "people",
         "translations": {
@@ -1182,7 +1182,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "linik",
+        "tetralingua": "linik",
         "english": "Child",
         "category": "people",
         "translations": {
@@ -1221,7 +1221,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "marik",
+        "tetralingua": "marik",
         "english": "Friend",
         "category": "people",
         "translations": {
@@ -1260,7 +1260,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "selik",
+        "tetralingua": "selik",
         "english": "Animal",
         "category": "nature",
         "translations": {
@@ -1299,7 +1299,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "torik",
+        "tetralingua": "torik",
         "english": "Creature",
         "category": "nature",
         "translations": {
@@ -1338,7 +1338,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "siklik",
+        "tetralingua": "siklik",
         "english": "Balance",
         "category": "abstract",
         "translations": {
@@ -1377,7 +1377,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "hhoik",
+        "tetralingua": "hhoik",
         "english": "Water",
         "category": "elements",
         "translations": {
@@ -1417,7 +1417,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "feik",
+        "tetralingua": "feik",
         "english": "Solid",
         "category": "materials",
         "why": "fe = מוצק (על שם ברזל - Fe בטבלת היסודות)",
@@ -1456,7 +1456,7 @@
         }
       },
       {
-        "tetralongia": "hoik",
+        "tetralingua": "hoik",
         "english": "Liquid",
         "category": "materials",
         "why": "ho = נוזל (HHO = H₂O, מים)",
@@ -1495,7 +1495,7 @@
         }
       },
       {
-        "tetralongia": "nnik",
+        "tetralingua": "nnik",
         "english": "Gas",
         "category": "materials",
         "why": "nn = גז (N₂ = חנקן בטבלת היסודות)",
@@ -1534,7 +1534,7 @@
         }
       },
       {
-        "tetralongia": "SiOOik",
+        "tetralingua": "SiOOik",
         "english": "Sand",
         "category": "material",
         "translations": {
@@ -1576,7 +1576,7 @@
         ]
       },
       {
-        "tetralongia": "Sik",
+        "tetralingua": "Sik",
         "english": "Silicon",
         "category": "element",
         "translations": {
@@ -1615,7 +1615,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "OOik",
+        "tetralingua": "OOik",
         "english": "Oxygen",
         "category": "element",
         "translations": {
@@ -1654,7 +1654,7 @@
         "abbreviation": "OO"
       },
       {
-        "tetralongia": "sokfalmgik",
+        "tetralingua": "sokfalmgik",
         "english": "Glass",
         "category": "material",
         "translations": {
@@ -1696,7 +1696,7 @@
     ],
     "verbs": [
       {
-        "tetralongia": "savli",
+        "tetralingua": "savli",
         "english": "To walk",
         "translations": {
           "he": "ללכת",
@@ -1734,7 +1734,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "norli",
+        "tetralingua": "norli",
         "english": "To see",
         "translations": {
           "he": "לראות",
@@ -1772,7 +1772,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "meli",
+        "tetralingua": "meli",
         "english": "To speak",
         "translations": {
           "he": "לדבר",
@@ -1810,7 +1810,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "lunli",
+        "tetralingua": "lunli",
         "english": "To think",
         "translations": {
           "he": "לחשוב",
@@ -1848,7 +1848,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "tarli",
+        "tetralingua": "tarli",
         "english": "To eat",
         "translations": {
           "he": "לאכול",
@@ -1886,7 +1886,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "hholi",
+        "tetralingua": "hholi",
         "english": "To drink",
         "translations": {
           "he": "לשתות",
@@ -1925,7 +1925,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "fali",
+        "tetralingua": "fali",
         "english": "To burn",
         "translations": {
           "he": "לבעור",
@@ -1963,7 +1963,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "zoli",
+        "tetralingua": "zoli",
         "english": "To live",
         "translations": {
           "he": "לחיות",
@@ -2001,7 +2001,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "kerli",
+        "tetralingua": "kerli",
         "english": "To create",
         "translations": {
           "he": "ליצור",
@@ -2039,7 +2039,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "venli",
+        "tetralingua": "venli",
         "english": "To fly",
         "translations": {
           "he": "לעוף",
@@ -2079,7 +2079,7 @@
     ],
     "adjectives": [
       {
-        "tetralongia": "budaf",
+        "tetralingua": "budaf",
         "english": "Good",
         "translations": {
           "he": "טוב",
@@ -2117,7 +2117,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "talaf",
+        "tetralingua": "talaf",
         "english": "high/tall",
         "translations": {
           "he": "גבוה",
@@ -2155,7 +2155,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "nexaf",
+        "tetralingua": "nexaf",
         "english": "New",
         "translations": {
           "he": "חדש",
@@ -2194,7 +2194,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "gardaf",
+        "tetralingua": "gardaf",
         "english": "Large",
         "translations": {
           "he": "גדול",
@@ -2232,7 +2232,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "Haf",
+        "tetralingua": "Haf",
 				"english": "Lightweight / Easy",
 				"translations": {
 					"he": "קל",
@@ -2271,7 +2271,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "Uaf",
+        "tetralingua": "Uaf",
 				"english": "heavy",
 				"translations": {
 					"he": "כבד",
@@ -2310,7 +2310,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "minaf",
+        "tetralingua": "minaf",
         "english": "Small",
         "translations": {
           "he": "קטן",
@@ -2349,7 +2349,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "siliaf",
+        "tetralingua": "siliaf",
         "english": "Quiet",
         "translations": {
           "he": "שקט",
@@ -2388,7 +2388,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "falmoraf",
+        "tetralingua": "falmoraf",
         "english": "Hot",
         "translations": {
           "he": "חם",
@@ -2426,7 +2426,7 @@
         "abbreviation": "fal"
       },
       {
-        "tetralongia": "hhoaf",
+        "tetralingua": "hhoaf",
         "english": "Wet",
         "translations": {
           "he": "רטוב",
@@ -2465,7 +2465,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "noraf",
+        "tetralingua": "noraf",
         "english": "Bright",
         "translations": {
           "he": "בהיר",
@@ -2503,7 +2503,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "muraf",
+        "tetralingua": "muraf",
         "english": "Hard",
         "translations": {
           "he": "קשה",
@@ -2542,7 +2542,7 @@
         "abbreviation": "mrl"
       },
       {
-        "tetralongia": "moloaf",
+        "tetralingua": "moloaf",
         "english": "Unified",
         "translations": {
           "he": "מאוחד",
@@ -2583,7 +2583,7 @@
     ],
     "adverbs": [
       {
-        "tetralongia": "silikna",
+        "tetralingua": "silikna",
         "english": "Balanced",
         "translations": {
           "he": "באיזון",
@@ -2621,7 +2621,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "budna",
+        "tetralingua": "budna",
         "english": "Well",
         "translations": {
           "he": "היטב",
@@ -2659,7 +2659,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "sililna",
+        "tetralingua": "sililna",
         "english": "Quietly",
         "translations": {
           "he": "בשקט",
@@ -2697,7 +2697,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "venna",
+        "tetralingua": "venna",
         "english": "Quickly",
         "translations": {
           "he": "במהירות",
@@ -2737,7 +2737,7 @@
     ],
     "connectors": [
       {
-        "tetralongia": "Ko",
+        "tetralingua": "Ko",
         "english": "And",
         "translations": {
           "he": "ו / וגם",
@@ -2775,7 +2775,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "Ni",
+        "tetralingua": "Ni",
         "english": "Or",
         "translations": {
           "he": "או",
@@ -2813,7 +2813,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "Ti",
+        "tetralingua": "Ti",
         "english": "But",
         "translations": {
           "he": "אבל",
@@ -2851,7 +2851,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "Ku",
+        "tetralingua": "Ku",
         "english": "Because",
         "translations": {
           "he": "כי / בגלל",
@@ -2889,7 +2889,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "Zn",
+        "tetralingua": "Zn",
         "english": "If",
         "translations": {
           "he": "אם",
@@ -2927,7 +2927,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "Fe",
+        "tetralingua": "Fe",
         "english": "That/Which",
         "translations": {
           "he": "ש... / אשר...",
@@ -2967,7 +2967,7 @@
     ],
     "greetings": [
       {
-        "tetralongia": "SiLiK",
+        "tetralingua": "SiLiK",
         "english": "Hello",
         "translations": {
           "he": "שלום",
@@ -3005,7 +3005,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "HeNaMg",
+        "tetralingua": "HeNaMg",
         "english": "Thank you",
         "translations": {
           "he": "תודה",
@@ -3043,7 +3043,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "Ne-BudLi-F",
+        "tetralingua": "Ne-BudLi-F",
         "english": "Excuse me",
         "translations": {
           "he": "סליחה",
@@ -3081,7 +3081,7 @@
         "abbreviation": ""
       },
       {
-        "tetralongia": "Li-Na-F",
+        "tetralingua": "Li-Na-F",
         "english": "Please",
         "translations": {
           "he": "בבקשה",
@@ -3121,7 +3121,7 @@
     ],
     "negation_general": [
       {
-        "tetralongia": "NeK",
+        "tetralingua": "NeK",
         "english": "No/Not",
         "translations": {
           "he": "לא / אין",
@@ -3162,7 +3162,7 @@
     ],
     "intensifiers_diminishers": [
       {
-        "tetralongia": "Mag",
+        "tetralingua": "Mag",
         "english": "Very/Much/A lot",
         "category": "intensifier",
         "translations": {
@@ -3202,7 +3202,7 @@
         "abbreviation": "Mg"
       },
       {
-        "tetralongia": "NeKMag",
+        "tetralingua": "NeKMag",
         "english": "A little/Few/Not much (Negation of much)",
         "category": "diminisher",
         "translations": {
@@ -3243,7 +3243,7 @@
     ]
   },
   "grammar_rules": {
-    "description": "Tetralongia grammar system based on periodic table groups",
+    "description": "tetralingua grammar system based on periodic table groups",
     "noun_formation": "Group 14 of Periodic Table (C, Si, Ge, Sn, Pb) endings - '-ik' suffix",
     "verb_formation": "Group 17 of Periodic Table (F, Cl, Br, I) endings - '-af' or '-of' suffix",
     "adjective_formation": "Lithium (Li) endings - '-li' suffix",
@@ -3266,10 +3266,10 @@
     "I": "Iodine - Attractive bonds - 'Possession' and ownership"
   },
   "usage_notes": {
-    "note_1": "Tetralongia is a systematic constructed language (conlang) designed to reflect chemical properties through linguistic patterns",
+    "note_1": "tetralingua is a systematic constructed language (conlang) designed to reflect chemical properties through linguistic patterns",
     "note_2": "Elemental symbols can be combined to form compound words with meanings derived from chemical reactions and element properties",
     "note_3": "The language serves both as a creative linguistic experiment and as a mnemonic tool for learning the periodic table",
-    "note_4": "Each translation maintains the core Tetralongia word root while adapting pronunciation and structure to each language's phonological system",
+    "note_4": "Each translation maintains the core tetralingua word root while adapting pronunciation and structure to each language's phonological system",
     "note_5": "The grammar system is based on Group periodicity, creating logical associations between word categories and element families",
     "note_6": "Samoan and Hawaiian translations add Pacific Island perspectives to this global linguistic experiment",
     "note_7": "The complete vocabulary now covers 70 items across 30 major world languages plus sign language considerations"
@@ -3293,10 +3293,10 @@
   "file_consolidation_metadata": {
     "consolidation_date": "2026-03-23",
     "files_consolidated": [
-      "tetralongia_multilingual.json - Basic 20-language edition",
-      "tetralongia_complete_multilingual.json - Full vocabulary in 20 languages",
-      "tetralongia_extended_8_languages.json - Extended set with 8 additional languages",
-      "TETRALONGIA_MASTER_28_LANGUAGES.json - Original master reference"
+      "tetralingua_multilingual.json - Basic 20-language edition",
+      "tetralingua_complete_multilingual.json - Full vocabulary in 20 languages",
+      "tetralingua_extended_8_languages.json - Extended set with 8 additional languages",
+      "tetralingua_MASTER_28_LANGUAGES.json - Original master reference"
     ],
     "new_languages_added": [
       "Samoan (sm) - 0.5 million native speakers",
@@ -3307,8 +3307,8 @@
     "total_coverage_vocabulary": 70
   },
   "credits": {
-    "created_for": "Tetralongia language community",
-    "translation_methodology": "Cultural and linguistic adaptation while preserving Tetralongia phonemes and chemical element associations",
+    "created_for": "tetralingua language community",
+    "translation_methodology": "Cultural and linguistic adaptation while preserving tetralingua phonemes and chemical element associations",
     "special_additions": "Samoan and Hawaiian translations expand Pacific Island representation in constructed language experiment",
     "supported_languages": "30 major world languages covering approximately 5.6 billion native speakers across all continents",
     "consolidation_purpose": "Create unified reference document combining all previous editions with extended language support"
