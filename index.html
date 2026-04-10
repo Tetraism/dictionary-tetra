@@ -289,6 +289,37 @@
   .modal-lang-name { font-size: 0.7rem; color: var(--text-dim); }
   .modal-lang-value { font-size: 0.95rem; color: var(--text); }
 
+  .modal-meta-row {
+    display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center;
+    margin-bottom: 0.9rem;
+  }
+  .modal-why {
+    font-family: 'Share Tech Mono', monospace; font-size: 0.78rem;
+    color: var(--text-dim); background: rgba(0,212,255,0.05);
+    border: 1px solid rgba(0,212,255,0.15); border-radius: 4px;
+    padding: 0.3rem 0.7rem; letter-spacing: 0.03em;
+  }
+  .modal-why .why-label { color: var(--accent1); margin-left: 0.35rem; opacity: 0.7; font-size: 0.68rem; }
+  .modal-abbreviation {
+    font-family: 'Share Tech Mono', monospace; font-size: 0.78rem;
+    color: var(--accent1); background: rgba(0,212,255,0.07);
+    border: 1px solid rgba(0,212,255,0.25); border-radius: 4px;
+    padding: 0.3rem 0.7rem; letter-spacing: 0.08em;
+  }
+  .modal-abbreviation .abbr-label { color: var(--text-dim); margin-left: 0.35rem; opacity: 0.7; font-size: 0.68rem; }
+  .modal-speak-btn {
+    background: none; border: 1px solid rgba(0,212,255,0.35);
+    border-radius: 4px; padding: 0.3rem 0.75rem;
+    color: var(--accent1); font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem; cursor: pointer; letter-spacing: 0.08em;
+    transition: background 0.18s, box-shadow 0.18s;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .modal-speak-btn:hover {
+    background: rgba(0,212,255,0.1);
+    box-shadow: 0 0 12px rgba(0,212,255,0.15);
+  }
+
   /* NO RESULTS */
   #no-results {
     display: none; grid-column: 1 / -1; text-align: center;
@@ -402,6 +433,7 @@
     <div class="modal-title" id="modal-title"></div>
     <div class="modal-english" id="modal-english"></div>
     <div class="modal-badges" id="modal-badges"></div>
+    <div class="modal-meta-row" id="modal-meta-row"></div>
     <div class="modal-langs-grid" id="modal-langs-grid"></div>
   </div>
 </div>
@@ -453,11 +485,14 @@ async function loadData() {
       if (gramCat === 'description' || !Array.isArray(items)) return;
       items.forEach(w => {
         allWords.push({
-          tetralingua:  w.tetralingua || '',
-          english:      w.english || '',
-          gramCat:      gramCat,
-          subCat:       w.category || '',
-          translations: w.translations || {},
+          tetralingua:   w.tetralingua || '',
+          english:       w.english || '',
+          gramCat:       gramCat,
+          subCat:        w.category || '',
+          translations:  w.translations || {},
+          why:           w.why || '',
+          abbreviation:  w.abbreviation || '',
+          pronunciation: w.Pronunciation || '',
         });
       });
     });
@@ -646,8 +681,7 @@ function openModal(w, color) {
     ${w.subCat ? `<span class="modal-badge" style="border-color:${color};color:${color}">${w.subCat}</span>` : ''}
   `;
 
-  const langsGrid = document.getElementById('modal-langs-grid');
-  langsGrid.innerHTML = languageList.map(l => {
+  document.getElementById('modal-langs-grid').innerHTML = languageList.map(l => {
     const val = w.translations[l.code];
     if (!val) return '';
     return `
@@ -657,6 +691,41 @@ function openModal(w, color) {
         <div class="modal-lang-value">${val}</div>
       </div>`;
   }).join('');
+
+  // meta row: speak button, why, abbreviation
+  const metaRow = document.getElementById('modal-meta-row');
+  metaRow.innerHTML = '';
+
+  // speak button
+  const speakText = w.pronunciation || w.tetralingua;
+  const speakBtn = document.createElement('button');
+  speakBtn.className = 'modal-speak-btn';
+  speakBtn.innerHTML = '▶ הקראה';
+  speakBtn.title = speakText;
+  speakBtn.addEventListener('click', () => {
+    const utt = new SpeechSynthesisUtterance(speakText);
+    utt.lang = 'en-US';
+    speechSynthesis.cancel();
+    speechSynthesis.speak(utt);
+  });
+  metaRow.appendChild(speakBtn);
+
+  // abbreviation
+  if (w.abbreviation) {
+    const abbr = document.createElement('div');
+    abbr.className = 'modal-abbreviation';
+    abbr.innerHTML = `<span class="abbr-label">קיצור</span>${w.abbreviation}`;
+    metaRow.appendChild(abbr);
+  }
+
+  // why
+  if (w.why) {
+    const why = document.createElement('div');
+    why.className = 'modal-why';
+    why.innerHTML = `<span class="why-label">מדוע</span>${w.why}`;
+    metaRow.appendChild(why);
+  }
+
   document.getElementById('modal-overlay').classList.add('open');
 }
 
